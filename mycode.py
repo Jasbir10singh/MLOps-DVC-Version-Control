@@ -12,6 +12,10 @@ data = {
 #creating dataframe from data
 df = pd.DataFrame(data)
 
+#adding new row
+new_row = {'Name': 'David', 'Age': 28, 'City': 'San Francisco'}
+df.loc[len(df.index)] = new_row
+
 data_dir = 'data'
 os.makedirs(data_dir, exist_ok=True)  # Create the directory if it doesn't exist
 # Save the DataFrame to a CSV file
